@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MVCForum.Data.Models;
 
 namespace MVC_Forum.Data
 {
@@ -12,5 +13,10 @@ namespace MVC_Forum.Data
             : base(options)
         {
         }
+
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<Forum> Forums { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<PostReply> Replies { get; set; }
     }
 }
