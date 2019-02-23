@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using MVC_Forum.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MVCForum.Data.Models;
 
 namespace MVC_Forum
 {
@@ -38,7 +39,7 @@ namespace MVC_Forum
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<ApplicationUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 

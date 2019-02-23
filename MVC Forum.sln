@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC Forum", "MVC Forum\MVC Forum.csproj", "{C49CCAE5-0C7B-4F61-95A4-D8F9A27A3D34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCForum", "MVC Forum\MVCForum.csproj", "{C49CCAE5-0C7B-4F61-95A4-D8F9A27A3D34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCForum.Data", "MVCForum.Data\MVCForum.Data.csproj", "{4FF42FDA-4793-48E5-90D3-BE777019CD2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCForum.Data", "MVCForum.Data\MVCForum.Data.csproj", "{4FF42FDA-4793-48E5-90D3-BE777019CD2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCForum.Service", "MVCForum.Service\MVCForum.Service.csproj", "{8B03F4D3-E67E-45F8-AD69-B2CC9B4A3555}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4FF42FDA-4793-48E5-90D3-BE777019CD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FF42FDA-4793-48E5-90D3-BE777019CD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FF42FDA-4793-48E5-90D3-BE777019CD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B03F4D3-E67E-45F8-AD69-B2CC9B4A3555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B03F4D3-E67E-45F8-AD69-B2CC9B4A3555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B03F4D3-E67E-45F8-AD69-B2CC9B4A3555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B03F4D3-E67E-45F8-AD69-B2CC9B4A3555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
