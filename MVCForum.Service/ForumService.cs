@@ -1,15 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MVC_Forum.Data;
 using MVCForum.Data;
 using MVCForum.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace MVCForum.Service
 {
-    class ForumService : IForum
+    public class ForumService : IForum
     {
         private readonly ApplicationDbContext _dbContext;
         public ForumService(ApplicationDbContext dbContext)
@@ -38,7 +39,12 @@ namespace MVCForum.Service
 
         public Forum GetById(int id)
         {
-            throw new NotImplementedException();
+            var forum = _dbContext.Forums.Where(f => f.Id == id)
+                .Include(f => f.Posts).ThenInclude(p => p.User)
+                .Include(f => f.Posts).ThenInclude(p => p.Replies).ThenInclude(r => r.User)
+                .FirstOrDefault();
+
+            return forum;
         }
 
         public Task UpdateForumDescription(int forumId, string newDescription)

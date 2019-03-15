@@ -1,0 +1,31 @@
+﻿@model MVCForum.Models.Post.PostIndexModel
+
+<h1>@Model.Title</h1>
+
+<div>
+    Author : @Model.AuthorName (@Model.AuthorRating)
+    Created: @Model.Created
+</div>
+
+<div>
+    Content: @Model.Content
+</div>
+
+@if (@Model.Replies.Any())
+{
+    foreach (var reply in Model.Replies)
+    {
+        <div>
+            <div>
+            Reply Author: @reply.AuthorName
+            Reply Date: @reply.Created
+        </div>
+
+        <div>
+            Reply Content: @reply.Content
+        </div>
+        </div>
+    }
+}
+
+

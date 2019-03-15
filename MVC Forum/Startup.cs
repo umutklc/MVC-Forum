@@ -10,12 +10,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MVC_Forum.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MVCForum.Data.Models;
+using MVCForum.Data;
+using MVCForum.Service;
 
-namespace MVC_Forum
+namespace MVCForum
 {
     public class Startup
     {
@@ -42,7 +43,8 @@ namespace MVC_Forum
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-
+            services.AddScoped<IForum, ForumService>();
+            services.AddScoped<IPost, PostService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

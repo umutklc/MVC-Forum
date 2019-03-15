@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MVCForum.Data.Models;
 
-namespace MVC_Forum.Data
+namespace MVCForum.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

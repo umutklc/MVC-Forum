@@ -1,6 +1,6 @@
 using System;
 
-namespace MVC_Forum.Models
+namespace MVCForum.Models
 {
     public class ErrorViewModel
     {
